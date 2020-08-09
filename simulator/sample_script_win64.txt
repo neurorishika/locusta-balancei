@@ -1,0 +1,1 @@
+python E:/Collins/locusta-balancei/simulator/initExperiment.py E:/Collins/locusta-balancei/odors/odorA_0.odor E:/Collins/locusta-balancei/protocol/Dur_6000_OdorDur_1000.protocol E:/Collins/locusta-balancei/locust/Locust_A.locust 0 pp_0.5 0.5
