@@ -380,7 +380,7 @@ print("Number of Neurons:",n_n)
 print("Number of Synapses:",(n_syn_ach+n_syn_fgaba+n_syn_sgaba))
 
 
-n_batch = 1
+n_batch = 10
 t_batch = np.array_split(t,n_batch)
 
 t_ = time.time()

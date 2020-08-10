@@ -50,7 +50,7 @@ np.save(folder+'/time',time)
 print("Welcome to the AL !!!")
 
 for i in range(data['n_split']):
-    call(['python',homepath+'locusta-balancei/simulator/antennalLobe.py',str(i), locust_path, protocol_path, sys.argv[5], folder, sys.argv[6]])
+    call(['python',homepath+'locusta-balancei/simulator/antennalLobe_win64.py',str(i), locust_path, protocol_path, sys.argv[5], folder, sys.argv[6]])
 
 os.remove(folder+'/state_vector.npy')
 os.remove(folder+'/time.npy')

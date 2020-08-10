@@ -7,7 +7,7 @@ import os
 from shutil import copyfile,copy,move
 import sys
 
-homepath = "E:/Collins/"
+homepath = "/home/collins/"
 
 # Select the Odorant, Odor Delivery Protocol, Locust Model
 odor_path = sys.argv[1]
