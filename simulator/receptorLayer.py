@@ -22,7 +22,7 @@ with open(locust_path, 'rb') as fp:
 # Define ORN Response Generator
 def generate_orn(orn_number,duration,resolution,odorVec,odorStart,odorEnd): # Function to generate single ORN Trace
 
-    baseline = np.clip(locust['baseline_firing']+0.5*locust['baseline_firing_variation']*np.random.normal(),1,None)/locust['peak_firing'] # Baseline Firing Rate Ratio
+    baseline = np.clip(locust['baseline_firing']+locust['baseline_firing_variation']*np.random.normal(),1,None)/locust['peak_firing'] # Baseline Firing Rate Ratio
     trace = baseline*np.ones(int(duration/resolution)) # Set Baseline activity for the Protocol Duration
     rec_field = pt.generateUniform(1,odor['dim_odorspace'],seed=int(locust['rec_seeds'][orn_number])) # Receptive Field of ORNs in Odor Space
 
