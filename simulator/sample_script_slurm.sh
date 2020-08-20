@@ -7,7 +7,7 @@
 #SBATCH --error=out/job.%J.err
 #SBATCH --output=out/job.%J.out
 #SBATCH --partition=standard
-#SBATCH -a 0-1
+#SBATCH -a 0-9
 
 cd $SLURM_SUBMIT_DIR
 
