@@ -130,3 +130,25 @@ SLURM_TASK_PID = 2269
 0: Number of Synapses: 5001
 0: Batch 1 Running...Session started...Finished in 722.67 secs...Saving...Saved ( Execution Time: 722.678 secs )
 0: Completed 5 Segment(s). Total Execution Time: 722.679 secs
+0: Number of Neurons: 120
+0: Number of Synapses: 5001
+0: Batch 1 Running...Session started...Finished in 910.14 secs...Saving...Saved ( Execution Time: 910.197 secs )
+0: Completed 4 Segment(s). Total Execution Time: 910.201 secs
+0: Number of Neurons: 120
+0: Number of Synapses: 5001
+0: Batch 1 Running...Session started...Finished in 747.93 secs...Saving...Saved ( Execution Time: 747.935 secs )
+0: Completed 6 Segment(s). Total Execution Time: 747.936 secs
+0: Metadata Acquired. Starting Simulation.
+0: Welcome to the AL !!!
+0: Simulation Completed. Time taken: 4499.07
+0: 'Thank you for using our services.'-AL
+0: Program Complete.
+0: Number of Neurons: 120
+0: Number of Synapses: 5001
+0: Batch 1 Running...Session started...Finished in 731.89 secs...Saving...Saved ( Execution Time: 731.906 secs )
+0: Completed 6 Segment(s). Total Execution Time: 731.907 secs
+0: Metadata Acquired. Starting Simulation.
+0: Welcome to the AL !!!
+0: Simulation Completed. Time taken: 4506.90
+0: 'Thank you for using our services.'-AL
+0: Program Complete.
