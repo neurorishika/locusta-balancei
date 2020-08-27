@@ -2,8 +2,6 @@
 
 #SBATCH --time=24:00:00
 #SBATCH --job-name=tensorflow
-#SBATCH --error=out/job.%J.err
-#SBATCH --output=out/job.%J.out
 #SBATCH --partition=standard
 
 srun -N1 script_slurmA.sh '0.0' &
