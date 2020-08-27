@@ -98,6 +98,7 @@ print("Generation Complete.")
 # Save ORN Data
 np.save(sys.argv[4]+'/ORN Firing Data',orns[:,::100])
 
+np.random.seed()
 init_theta = np.random.uniform(size=orns.shape[0])
 random_normal = np.random.normal(size=orns.shape)
 
@@ -106,7 +107,7 @@ def spike_generator(fr,resolution,init_theta=init_theta,random_normal=random_nor
     theta = init_theta
     for i in range(fr.shape[1]):
         dtheta = resolution/1000*fr[:,i]
-        theta = theta + dtheta + resolution*0.5*random_normal[:,i]
+        theta = theta + dtheta + resolution*0.75*random_normal[:,i]
         spike[:,i]= theta>1
         theta = np.where(theta>1,np.zeros(theta.shape[0]),theta)
         if i%int(1000/resolution)==0:
