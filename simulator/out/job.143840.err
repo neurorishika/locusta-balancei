@@ -1,0 +1,14 @@
+0: Traceback (most recent call last):
+srun: error: cn028: task 0: Exited with exit code 1
+0:   File "/home/collins/locusta-balancei/simulator/initExperiment.py", line 2, in <module>
+0:     import numpy as np
+0: ImportError: No module named numpy
+0: Traceback (most recent call last):
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/initExperiment.py", line 2, in <module>
+0:     import numpy as np
+0: ImportError: No module named numpy
+0:   File "/home/collins/locusta-balancei/simulator/initExperiment.py", line 2, in <module>
+0:     import numpy as np
+0: ImportError: No module named numpy
+srun: error: cn157: task 0: Exited with exit code 1
