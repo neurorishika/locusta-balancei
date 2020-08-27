@@ -1,0 +1,87 @@
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/antennalLobe.py", line 2, in <module>
+0:     import tensorflow.compat.v1 as tf
+0: ModuleNotFoundError: No module named 'tensorflow'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/antennalLobe.py", line 2, in <module>
+0:     import tensorflow.compat.v1 as tf
+0: ModuleNotFoundError: No module named 'tensorflow'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/antennalLobe.py", line 2, in <module>
+0:     import tensorflow.compat.v1 as tf
+0: ModuleNotFoundError: No module named 'tensorflow'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/antennalLobe.py", line 2, in <module>
+0:     import tensorflow.compat.v1 as tf
+0: ModuleNotFoundError: No module named 'tensorflow'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/antennalLobe.py", line 2, in <module>
+0:     import tensorflow.compat.v1 as tf
+0: ModuleNotFoundError: No module named 'tensorflow'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/antennalLobe.py", line 2, in <module>
+0:     import tensorflow.compat.v1 as tf
+0: ModuleNotFoundError: No module named 'tensorflow'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/antennalLobe.py", line 2, in <module>
+0:     import tensorflow.compat.v1 as tf
+0: ModuleNotFoundError: No module named 'tensorflow'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/antennalLobe.py", line 2, in <module>
+0:     import tensorflow.compat.v1 as tf
+0: ModuleNotFoundError: No module named 'tensorflow'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/antennalLobe.py", line 2, in <module>
+0:     import tensorflow.compat.v1 as tf
+0: ModuleNotFoundError: No module named 'tensorflow'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/antennalLobe.py", line 2, in <module>
+0:     import tensorflow.compat.v1 as tf
+0: ModuleNotFoundError: No module named 'tensorflow'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/antennalLobe.py", line 2, in <module>
+0:     import tensorflow.compat.v1 as tf
+0: ModuleNotFoundError: No module named 'tensorflow'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/antennalLobe.py", line 2, in <module>
+0:     import tensorflow.compat.v1 as tf
+0: ModuleNotFoundError: No module named 'tensorflow'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/antennalLobe.py", line 2, in <module>
+0:     import tensorflow.compat.v1 as tf
+0: ModuleNotFoundError: No module named 'tensorflow'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/antennalLobe.py", line 2, in <module>
+0:     import tensorflow.compat.v1 as tf
+0: ModuleNotFoundError: No module named 'tensorflow'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/antennalLobe.py", line 2, in <module>
+0:     import tensorflow.compat.v1 as tf
+0: ModuleNotFoundError: No module named 'tensorflow'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/initExperiment.py", line 55, in <module>
+0:     os.remove(folder+'/state_vector.npy')
+0: FileNotFoundError: [Errno 2] No such file or directory: '/home/collins/Simulation_Cache/test_run_0.0/odorC_90_Dur_6000_OdorDur_1000_Locust_B_9/state_vector.npy'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/antennalLobe.py", line 2, in <module>
+0:     import tensorflow.compat.v1 as tf
+0: ModuleNotFoundError: No module named 'tensorflow'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/antennalLobe.py", line 2, in <module>
+0:     import tensorflow.compat.v1 as tf
+0: ModuleNotFoundError: No module named 'tensorflow'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/initExperiment.py", line 55, in <module>
+0:     os.remove(folder+'/state_vector.npy')
+0: FileNotFoundError: [Errno 2] No such file or directory: '/home/collins/Simulation_Cache/test_run_0.0/odorA_0_Dur_6000_OdorDur_1000_Locust_B_9/state_vector.npy'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/antennalLobe.py", line 2, in <module>
+0:     import tensorflow.compat.v1 as tf
+0: ModuleNotFoundError: No module named 'tensorflow'
+0: Traceback (most recent call last):
+0:   File "/home/collins/locusta-balancei/simulator/initExperiment.py", line 55, in <module>
+0:     os.remove(folder+'/state_vector.npy')
+0: FileNotFoundError: [Errno 2] No such file or directory: '/home/collins/Simulation_Cache/test_run_0.01/odorA_0_Dur_6000_OdorDur_1000_Locust_A_9/state_vector.npy'
+srun: error: cn044: task 0: Exited with exit code 1
+srun: error: cn045: task 0: Exited with exit code 1
+srun: error: cn046: task 0: Exited with exit code 1

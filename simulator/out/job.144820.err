@@ -1,0 +1,5 @@
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+0: slurmstepd: error: *** STEP 144820.1 ON cn035 CANCELLED AT 2020-08-26T21:07:00 ***
+0: slurmstepd: error: *** STEP 144820.0 ON cn025 CANCELLED AT 2020-08-26T21:07:00 ***
+slurmstepd: error: *** JOB 144820 ON cn025 CANCELLED AT 2020-08-26T21:07:00 ***
