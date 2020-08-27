@@ -24,7 +24,7 @@ import sys
 import pickle
 
 ###########SIMULATION FRAMEWORK############
-tf.disable_eager_execution()
+tf.disable_v2_behavior()
 
 with open(sys.argv[2], 'rb') as fp:
     locust = pickle.load(fp)
