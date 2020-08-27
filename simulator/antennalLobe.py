@@ -7,6 +7,7 @@ numThreads = int(os.getenv('SLURM_CPUS_PER_TASK',1))
 numInterOpThreads = 1
 # The total number of threads must be an integer multiple
 # of numInterOpThreads to make sure that all cores are used
+print(numThreads)
 assert numThreads % numInterOpThreads == 0
 # Compute the number of intra-operator threads; the number
 # of OpenMP threads for low-level libraries must be set to
