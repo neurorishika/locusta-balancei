@@ -1,3 +1,20 @@
+import os
+
+# Get number of threads from Slurm
+numThreads = int(os.getenv('SLURM_CPUS_PER_TASK',1))
+# Set number of threads for inter-operator parallelism,
+# start with a single thread
+numInterOpThreads = 1
+# The total number of threads must be an integer multiple
+# of numInterOpThreads to make sure that all cores are used
+assert numThreads % numInterOpThreads == 0
+# Compute the number of intra-operator threads; the number
+# of OpenMP threads for low-level libraries must be set to
+# the same value for optimal performance
+numIntraOpThreads = numThreads // numInterOpThreads
+os.environ['OMP_NUM_THREADS'] = str(numIntraOpThreads)
+# Import TensorFlow after setting OMP_NUM_THREADS to make sure
+# that low-level libraries are initialised correctly
 
 import tensorflow.compat.v1 as tf
 import numpy as np
@@ -7,7 +24,7 @@ import sys
 import pickle
 
 ###########SIMULATION FRAMEWORK############
-tf.disable_v2_behavior()
+tf.disable_eager_execution()
 
 with open(sys.argv[2], 'rb') as fp:
     locust = pickle.load(fp)
@@ -397,7 +414,7 @@ for n,i in enumerate(t_batch):
     init_state = tf.constant(state_vector, dtype=tf.float64)
     tensor_state = tf_int.odeint(dXdt, init_state, t, n_n, F_b)
 
-    with tf.Session(config=tf.ConfigProto(inter_op_parallelism_threads=2,intra_op_parallelism_threads=20)) as sess:
+    with tf.Session(config=tf.ConfigProto(inter_op_parallelism_threads=numInterOpThreads,intra_op_parallelism_threads=numIntraOpThreads)) as sess:
         print("Session started...",end="")
         tf.global_variables_initializer().run()
         state = sess.run(tensor_state)
