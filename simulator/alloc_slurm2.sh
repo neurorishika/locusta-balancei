@@ -11,4 +11,5 @@ srun -lN1 -r 0 script_slurmB.sh '0.0' &
 srun -lN1 -r 1 script_slurmB.sh '0.01' &
 srun -lN1 -r 2 script_slurmB.sh '0.1' &
 srun -lN1 -r 3 script_slurmB.sh '1.0' &
-srun -lN1 -r 4 script_slurmB.sh '10.0'
+srun -lN1 -r 4 script_slurmB.sh '10.0' &
+wait
