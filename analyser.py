@@ -22,15 +22,31 @@ for n,i in enumerate(PNspikes):
     histogram_rate = time_histogram([i], binsize=0.1*s,output='rate')
     hists.append(histogram_rate.magnitude.flatten())
 hists = np.array(hists)
-plt.subplot(121)
+
+LNspikes= []
+for i in tqdm(range(30)):
+    spike_times = np.arange(2,6000)[firing_LN[:,i]]
+    LNspikes.append(neo.SpikeTrain(spike_times*ms,t_start=0*ms,t_stop=6000*ms))
+Lhists = []
+for n,i in enumerate(LNspikes):
+    histogram_rate = time_histogram([i], binsize=0.1*s,output='rate')
+    Lhists.append(histogram_rate.magnitude.flatten())
+Lhists = np.array(Lhists)
+
+
+plt.subplot(141)
 plt.eventplot([temp.magnitude for temp in PNspikes], color='black')
-plt.subplot(122)
+plt.subplot(142)
 plt.imshow(hists,aspect='auto')
+plt.subplot(222)
+plt.eventplot([temp.magnitude for temp in LNspikes], color='black')
+plt.subplot(224)
+plt.imshow(Lhists,aspect='auto')
 plt.colorbar()
 plt.show()
 
-resp = [(i.sum(axis=0)>0).mean() for i in np.array_split(firing_PN,6000/50,axis=0)]
-resp2 = [(i.sum(axis=0)>0).mean() for i in np.array_split(firing_LN,6000/50,axis=0)]
+resp = [(i.sum(axis=0)>0).mean() for i in np.array_split(firing_PN,6000/100,axis=0)]
+resp2 = [(i.sum(axis=0)>0).mean() for i in np.array_split(firing_LN,6000/100,axis=0)]
 plt.subplot(311)
 plt.plot(hists.mean(axis=0))
 plt.subplot(312)
