@@ -129,7 +129,7 @@ sigma_sgaba = [1.5]*n_n              # Decay Time Constant
 # G_sgaba = [1.3]*p_n+[0.0]*l_n      # sGABA Conductance
 #G_sgaba = [0.05]*p_n+[0.0]*l_n      # sGABA Conductance
 # removed to test stronger dip G_sgaba = [0.09]*p_n+[0.0]*l_n      # sGABA Conductance
-sgaba = [0.09]*p_n+[0.0]*l_n      # sGABA Conductance
+G_sgaba = [0.09]*p_n+[0.0]*l_n      # sGABA Conductance
 E_sgaba = [-95.0]*n_n                # sGABA Potential
 
 
