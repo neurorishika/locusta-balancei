@@ -1,0 +1,30 @@
+==========================================
+SLURM_CLUSTER_NAME = param-brahma
+SLURM_ARRAY_JOB_ID = 
+SLURM_ARRAY_TASK_ID = 
+SLURM_ARRAY_TASK_COUNT = 
+SLURM_ARRAY_TASK_MAX = 
+SLURM_ARRAY_TASK_MIN = 
+SLURM_JOB_ACCOUNT = collins
+SLURM_JOB_ID = 147557
+SLURM_JOB_NAME = tensorflow
+SLURM_JOB_NODELIST = cn[041,066,110,115,168]
+SLURM_JOB_USER = collins
+SLURM_JOB_UID = 7009
+SLURM_JOB_PARTITION = standard
+SLURM_TASK_PID = 32514
+SLURM_SUBMIT_DIR = /home/collins/locusta-balancei/simulator
+SLURM_CPUS_ON_NODE = 1
+SLURM_NTASKS = 
+SLURM_TASK_PID = 32514
+==========================================
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 147557.3 ON cn168 CANCELLED AT 2020-09-03T13:29:09 ***
+slurmstepd: error: *** STEP 147557.0 ON cn066 CANCELLED AT 2020-09-03T13:29:09 ***
+slurmstepd: error: *** STEP 147557.2 ON cn115 CANCELLED AT 2020-09-03T13:29:09 ***
+slurmstepd: error: *** STEP 147557.1 ON cn110 CANCELLED AT 2020-09-03T13:29:09 ***
+slurmstepd: error: *** JOB 147557 ON cn041 CANCELLED AT 2020-09-03T13:29:09 ***

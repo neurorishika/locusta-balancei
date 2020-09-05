@@ -128,7 +128,8 @@ V0_sgaba = [-20.0]*n_n               # Decay Potential
 sigma_sgaba = [1.5]*n_n              # Decay Time Constant
 # G_sgaba = [1.3]*p_n+[0.0]*l_n      # sGABA Conductance
 #G_sgaba = [0.05]*p_n+[0.0]*l_n      # sGABA Conductance
-G_sgaba = [0.09]*p_n+[0.0]*l_n      # sGABA Conductance
+# removed to test stronger dip G_sgaba = [0.09]*p_n+[0.0]*l_n      # sGABA Conductance
+sgaba = [0.09]*p_n+[0.0]*l_n      # sGABA Conductance
 E_sgaba = [-95.0]*n_n                # sGABA Potential
 
 
@@ -381,7 +382,7 @@ current_input = np.load(sys.argv[5]+"/current_input.npy")
 
 ## Scale ORN Output to AL Input
 PN_scale = 30/current_input[:p_n,:].max()/60 # PN Scaling Factor
-LN_scale = 2.5/current_input[p_n:,:].max()/40 # LN Scaling Factor
+LN_scale = 1.5/current_input[p_n:,:].max()/40 # LN Scaling Factor
 
 current_input[:p_n,:] = (current_input[:p_n,:] * PN_scale)
 current_input[p_n:,:] = (current_input[p_n:,:] * LN_scale)
