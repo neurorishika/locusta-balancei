@@ -382,13 +382,13 @@ current_input = np.load(sys.argv[5]+"/current_input.npy")
 
 ## Scale ORN Output to AL Input
 PN_scale = 30/current_input[:p_n,:].max()/60 # PN Scaling Factor
-LN_scale = 1.5/current_input[p_n:,:].max()/40 # LN Scaling Factor
+LN_scale = 1.75/current_input[p_n:,:].max()/40 # LN Scaling Factor
 
 current_input[:p_n,:] = (current_input[:p_n,:] * PN_scale)
 current_input[p_n:,:] = (current_input[p_n:,:] * LN_scale)
 
 if sys.argv[1] == '0':
-    state_vector =  [-65]* p_n+[-50]* l_n + [0.5]* (n_n + 4*p_n + 3*l_n) + [2.4*(10**(-4))]*l_n + [0]*(n_syn_ach+n_syn_fgaba+2*n_syn_sgaba) + [-(sim_time+1)]*n_n
+    state_vector =  [-45]* p_n+[-45]* l_n + [0.5]* (n_n + 4*p_n + 3*l_n) + [2.4*(10**(-4))]*l_n + [0]*(n_syn_ach+n_syn_fgaba+2*n_syn_sgaba) + [-(sim_time+1)]*n_n
     state_vector = np.array(state_vector)
     state_vector = state_vector + 0.01*state_vector*np.random.normal(size=state_vector.shape)
     np.save(sys.argv[5]+"/state_vector",state_vector)
