@@ -381,8 +381,8 @@ def dXdt(X, t): # X is the state vector
 current_input = np.load(sys.argv[5]+"/current_input.npy")
 
 ## Scale ORN Output to AL Input
-PN_scale = 30/current_input[:p_n,:].max()/60 # PN Scaling Factor
-LN_scale = 1.75/current_input[p_n:,:].max()/40 # LN Scaling Factor
+PN_scale = 0.25#30/current_input[:p_n,:].max()/60 # PN Scaling Factor
+LN_scale = 0.01#1.75/current_input[p_n:,:].max()/40 # LN Scaling Factor
 
 current_input[:p_n,:] = (current_input[:p_n,:] * PN_scale)
 current_input[p_n:,:] = (current_input[p_n:,:] * LN_scale)
