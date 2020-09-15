@@ -111,7 +111,7 @@ spread = (round(data['LNPN']*p_n)//2)*2+1 # Round to closest odd integer
 center = 0
 index = np.arange(p_n)
 for i in range(l_n):
-    idx = index[np.arange(center-stride//2,1+center+stride//2)]
+    idx = index[np.arange(center-spread//2,1+center+spread//2)%p_n]
     LNPN[idx,i] = 1
     center+=stride
 gaba_mat[:p_n,p_n:] = LNPN # LN->PN
