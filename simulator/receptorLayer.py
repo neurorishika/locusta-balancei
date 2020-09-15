@@ -19,6 +19,8 @@ with open(protocol_path, 'rb') as fp:
 with open(locust_path, 'rb') as fp:
     locust = pickle.load(fp)
 
+locust['peak_firing'] = 0.75*locust['peak_firing']
+
 # Define ORN Response Generator
 def generate_orn(orn_number,duration,resolution,odorVec,odorStart,odorEnd): # Function to generate single ORN Trace
     np.random.seed(int(locust['rec_seeds'][orn_number]))
