@@ -41,7 +41,8 @@ data['AL_n'] = 120
 data['PNPN'] = 0.0
 data['PNLN'] = 0.5
 data['LNLN'] = 0.5
-data['LNPN'] = 0.5
+#data['LNPN'] = 0.5
+data['LNPN'] = 0.2
 
 l_n = int(0.25*data['AL_n'])
 p_n = int(0.75*data['AL_n'])
@@ -103,7 +104,17 @@ np.fill_diagonal(ach_mat,0.)
 data['achmat'] = ach_mat
 
 gaba_mat = np.zeros((data['AL_n'],data['AL_n']))
-gaba_mat[:p_n,p_n:] = np.random.choice([0.,1.],size=(p_n,l_n),p=(1-data['LNPN'],data['LNPN'])) # LN->PN
+#gaba_mat[:p_n,p_n:] = np.random.choice([0.,1.],size=(p_n,l_n),p=(1-data['LNPN'],data['LNPN'])) # LN->PN
+LNPN = np.zeros((p_n,l_n))
+stride = int(p_n/l_n)
+spread = (round(data['LNPN']*p_n)//2)*2+1 # Round to closest odd integer
+center = 0
+index = np.arange(p_n)
+for i in range(l_n):
+    idx = index[np.arange(center-stride//2,1+center+stride//2)]
+    LNPN[idx,i] = 1
+    center+=stride
+gaba_mat[:p_n,p_n:] = LNPN # LN->PN
 gaba_mat[p_n:,p_n:] = np.random.choice([0.,1.],size=(l_n,l_n),p=(1-data['LNLN'],data['LNLN'])) # LN->LN
 np.fill_diagonal(gaba_mat,0.)
 data['gabamat'] = gaba_mat
