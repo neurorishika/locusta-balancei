@@ -19,12 +19,12 @@ with open(protocol_path, 'rb') as fp:
 with open(locust_path, 'rb') as fp:
     locust = pickle.load(fp)
 
-locust['peak_firing'] = 0.75*locust['peak_firing']
+locust['peak_firing'] = 0.70*locust['peak_firing']
 
 # Define ORN Response Generator
 def generate_orn(orn_number,duration,resolution,odorVec,odorStart,odorEnd): # Function to generate single ORN Trace
     np.random.seed(int(locust['rec_seeds'][orn_number]))
-    baseline = np.clip(locust['baseline_firing']+9+0.25*locust['baseline_firing_variation']*np.random.normal(),1,None)/locust['peak_firing'] # Baseline Firing Rate Ratio
+    baseline = np.clip(locust['baseline_firing']+10+0.2*locust['baseline_firing_variation']*np.random.normal(),1,None)/locust['peak_firing'] # Baseline Firing Rate Ratio
     trace = baseline*np.ones(int(duration/resolution)) # Set Baseline activity for the Protocol Duration
     np.random.seed()
     rec_field = pt.generateUniform(1,odor['dim_odorspace'],seed=int(locust['rec_seeds'][orn_number])) # Receptive Field of ORNs in Odor Space
