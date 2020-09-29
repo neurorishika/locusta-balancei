@@ -24,7 +24,7 @@ locust['peak_firing'] = 0.70*locust['peak_firing']
 # Define ORN Response Generator
 def generate_orn(orn_number,duration,resolution,odorVec,odorStart,odorEnd): # Function to generate single ORN Trace
     np.random.seed(int(locust['rec_seeds'][orn_number]))
-    baseline = np.clip(locust['baseline_firing']+10+0.2*locust['baseline_firing_variation']*np.random.normal(),1,None)/locust['peak_firing'] # Baseline Firing Rate Ratio
+    baseline = np.clip(locust['baseline_firing']+8.75+0.2*locust['baseline_firing_variation']*np.random.normal(),1,None)/locust['peak_firing'] # Baseline Firing Rate Ratio
     trace = baseline*np.ones(int(duration/resolution)) # Set Baseline activity for the Protocol Duration
     np.random.seed()
     rec_field = pt.generateUniform(1,odor['dim_odorspace'],seed=int(locust['rec_seeds'][orn_number])) # Receptive Field of ORNs in Odor Space
@@ -32,7 +32,7 @@ def generate_orn(orn_number,duration,resolution,odorVec,odorStart,odorEnd): # Fu
     latency = locust['latency'][orn_number] # Latency of Response to Odor Presentation
     t_rise = locust['t_rise'][orn_number] # Time to Rise to Peak
     t_fall = locust['t_fall'][orn_number] # Response Decay Time
-    tuning = np.int32(locust['tuning'][orn_number]*4) # Odor Tuning-width / Sensitivity
+    tuning = np.int32(locust['tuning'][orn_number]*3) # Odor Tuning-width / Sensitivity
 
     def sigmoid(x,a1=locust['a1'],a2=locust['a2']):	# Sigmoid for Response
         return 1/(1+np.exp(-a1*(x-a2)))
