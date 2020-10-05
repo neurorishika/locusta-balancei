@@ -7,3 +7,4 @@ sbatch -N6 alloc_slurm2c.sh
 sbatch -N6 alloc_slurm3a.sh
 sbatch -N6 alloc_slurm3b.sh
 sbatch -N6 alloc_slurm3c.sh
+watch "squeue | grep collins"
