@@ -93,7 +93,7 @@ t_max = 0.3                          # Maximum Time for Synapse
 t_delay = 0                          # Axonal Transmission Delay
 A = [0.5]*n_n                        # Synaptic Response Strength
 # g_ach = [0.09]*p_n+[0.45]*l_n         # Ach Conductance
-g_ach = [0.0]*p_n+[0.3]*l_n         # Ach Conductance
+g_ach = [0.0]*p_n+[1.5]*l_n         # Ach Conductance
 E_ach = [0.0]*n_n                    # Ach Potential
 
 ## Defining GABAa Synapse Connectivity ##
@@ -109,7 +109,7 @@ V0 = [-20.0]*n_n                     # Decay Potential
 sigma = [1.5]*n_n                    # Decay Time Constant
 # g_fgaba = [0.36]*p_n+[0.3]*l_n        # fGABA Conductance
 # g_fgaba = [1.3]*p_n+[0.8]*l_n        # fGABA Conductance
-g_fgaba = [float(sys.argv[6])]*p_n+[1.2]*l_n #0.4       # fGABA Conductance
+g_fgaba = [float(sys.argv[6])]*p_n+[0.8]*l_n #0.4       # fGABA Conductance
 E_fgaba = [-70.0]*n_n                # fGABA Potential
 
 ## Defining GABAslow Synapse Connectivity ##
@@ -382,14 +382,14 @@ current_input = np.load(sys.argv[5]+"/current_input.npy")
 
 ## Scale ORN Output to AL Input
 PN_scale = 1.00#30/current_input[:p_n,:].max()/60 # PN Scaling Factor
-LN_scale = 0.26#1.75/current_input[p_n:,:].max()/40 # LN Scaling Factor
+LN_scale = 0.10#1.75/current_input[p_n:,:].max()/40 # LN Scaling Factor
 
 ## Normalize to reduce variability
 LNpeak = current_input[p_n:,100000:200000].mean()
 LNbase = current_input[p_n:,:100000].mean()
 
 current_input[:p_n,:] = (current_input[:p_n,:] * PN_scale)
-current_input[p_n:,:] = ((current_input[p_n:,:]-LNbase)/(LNpeak-LNbase)*(0.275*LNbase)+LNbase) * LN_scale
+current_input[p_n:,:] = ((current_input[p_n:,:]-LNbase)/(LNpeak-LNbase)*(1.0*LNbase)+LNbase) * LN_scale
 
 if sys.argv[1] == '0':
     state_vector =  [-45]* p_n+[-45]* l_n + [0.5]* (n_n + 4*p_n + 3*l_n) + [2.4*(10**(-4))]*l_n + [0]*(n_syn_ach+n_syn_fgaba+2*n_syn_sgaba) + [-(sim_time+1)]*n_n
