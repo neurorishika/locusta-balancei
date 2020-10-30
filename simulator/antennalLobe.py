@@ -93,7 +93,7 @@ t_max = 0.3                          # Maximum Time for Synapse
 t_delay = 0                          # Axonal Transmission Delay
 A = [0.5]*n_n                        # Synaptic Response Strength
 # g_ach = [0.09]*p_n+[0.45]*l_n         # Ach Conductance
-g_ach = [0.0]*p_n+[1.5]*l_n         # Ach Conductance
+g_ach = [0.0]*p_n+[0.0]*l_n         # Ach Conductance
 E_ach = [0.0]*n_n                    # Ach Potential
 
 ## Defining GABAa Synapse Connectivity ##
@@ -382,7 +382,7 @@ current_input = np.load(sys.argv[5]+"/current_input.npy")
 
 ## Scale ORN Output to AL Input
 PN_scale = 1.00#30/current_input[:p_n,:].max()/60 # PN Scaling Factor
-LN_scale = 0.10#1.75/current_input[p_n:,:].max()/40 # LN Scaling Factor
+LN_scale = 0.15#1.75/current_input[p_n:,:].max()/40 # LN Scaling Factor
 
 ## Normalize to reduce variability
 LNpeak = current_input[p_n:,100000:200000].mean()
