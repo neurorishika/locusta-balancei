@@ -1,7 +1,7 @@
 #!/bin/sh
 cd $SLURM_SUBMIT_DIR
 
-file="/home/collins/locusta-balancei/grid/exp_label"
+file="/home/collins/locusta-balancei/simplified/exp_label"
 name=$(cat "$file")
 name="${name}_$1_$2"
 
