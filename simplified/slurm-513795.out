@@ -1,0 +1,120 @@
+==========================================
+SLURM_CLUSTER_NAME = param-brahma
+SLURM_ARRAY_JOB_ID = 
+SLURM_ARRAY_TASK_ID = 
+SLURM_ARRAY_TASK_COUNT = 
+SLURM_ARRAY_TASK_MAX = 
+SLURM_ARRAY_TASK_MIN = 
+SLURM_JOB_ACCOUNT = collins
+SLURM_JOB_ID = 513795
+SLURM_JOB_NAME = tensorflow
+SLURM_JOB_NODELIST = cn053
+SLURM_JOB_USER = collins
+SLURM_JOB_UID = 7009
+SLURM_JOB_PARTITION = standard
+SLURM_TASK_PID = 48903
+SLURM_SUBMIT_DIR = /home/collins/locusta-balancei/simplified
+SLURM_CPUS_ON_NODE = 1
+SLURM_NTASKS = 
+SLURM_TASK_PID = 48903
+==========================================
+Welcome to the ORNs !!!
+Generating ORN Responses...
+1/100 ORN Types Completed2/100 ORN Types Completed3/100 ORN Types Completed4/100 ORN Types Completed5/100 ORN Types Completed6/100 ORN Types Completed7/100 ORN Types Completed8/100 ORN Types Completed9/100 ORN Types Completed10/100 ORN Types Completed11/100 ORN Types Completed12/100 ORN Types Completed13/100 ORN Types Completed14/100 ORN Types Completed15/100 ORN Types Completed16/100 ORN Types Completed17/100 ORN Types Completed18/100 ORN Types Completed19/100 ORN Types Completed20/100 ORN Types Completed21/100 ORN Types Completed22/100 ORN Types Completed23/100 ORN Types Completed24/100 ORN Types Completed25/100 ORN Types Completed26/100 ORN Types Completed27/100 ORN Types Completed28/100 ORN Types Completed29/100 ORN Types Completed30/100 ORN Types Completed31/100 ORN Types Completed32/100 ORN Types Completed33/100 ORN Types Completed34/100 ORN Types Completed35/100 ORN Types Completed36/100 ORN Types Completed37/100 ORN Types Completed38/100 ORN Types Completed39/100 ORN Types Completed40/100 ORN Types Completed41/100 ORN Types Completed42/100 ORN Types Completed43/100 ORN Types Completed44/100 ORN Types Completed45/100 ORN Types Completed46/100 ORN Types Completed47/100 ORN Types Completed48/100 ORN Types Completed49/100 ORN Types Completed50/100 ORN Types Completed51/100 ORN Types Completed52/100 ORN Types Completed53/100 ORN Types Completed54/100 ORN Types Completed55/100 ORN Types Completed56/100 ORN Types Completed57/100 ORN Types Completed58/100 ORN Types Completed59/100 ORN Types Completed60/100 ORN Types Completed61/100 ORN Types Completed62/100 ORN Types Completed63/100 ORN Types Completed64/100 ORN Types Completed65/100 ORN Types Completed66/100 ORN Types Completed67/100 ORN Types Completed68/100 ORN Types Completed69/100 ORN Types Completed70/100 ORN Types Completed71/100 ORN Types Completed72/100 ORN Types Completed73/100 ORN Types Completed74/100 ORN Types Completed75/100 ORN Types Completed76/100 ORN Types Completed77/100 ORN Types Completed78/100 ORN Types Completed79/100 ORN Types Completed80/100 ORN Types Completed81/100 ORN Types Completed82/100 ORN Types Completed83/100 ORN Types Completed84/100 ORN Types Completed85/100 ORN Types Completed86/100 ORN Types Completed87/100 ORN Types Completed88/100 ORN Types Completed89/100 ORN Types Completed90/100 ORN Types Completed91/100 ORN Types Completed92/100 ORN Types Completed93/100 ORN Types Completed94/100 ORN Types Completed95/100 ORN Types Completed96/100 ORN Types Completed97/100 ORN Types Completed98/100 ORN Types Completed99/100 ORN Types Completed100/100 ORN Types CompletedGeneration Complete.
+Generation Complete
+'Information has been transferred to the Antennal Lobe. Thank you for using our services.' - ORNs
+WARNING:tensorflow:From /home/collins/.local/lib/python3.7/site-packages/tensorflow_core/python/compat/v2_compat.py:88: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+WARNING:tensorflow:From /home/collins/locusta-balancei/simplified/antennalLobe.py:269: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-11-06 22:00:24.412138: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2020-11-06 22:00:24.416933: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2900000000 Hz
+2020-11-06 22:00:24.417106: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x564ca1ee1e50 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-11-06 22:00:24.417160: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+1
+Number of Neurons: 120
+Number of Synapses: 3298
+Batch 1 Running...Session started...Finished in 169.7 secs...Saving...Saved ( Execution Time: 169.703 secs )
+Completed 1 Segment(s). Total Execution Time: 169.704 secs
+WARNING:tensorflow:From /home/collins/.local/lib/python3.7/site-packages/tensorflow_core/python/compat/v2_compat.py:88: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+WARNING:tensorflow:From /home/collins/locusta-balancei/simplified/antennalLobe.py:269: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-11-06 22:03:18.900252: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2020-11-06 22:03:18.905043: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2900000000 Hz
+2020-11-06 22:03:18.905215: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5631bd41c740 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-11-06 22:03:18.905270: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+1
+Number of Neurons: 120
+Number of Synapses: 3298
+Batch 1 Running...Session started...Finished in 179.79 secs...Saving...Saved ( Execution Time: 179.793 secs )
+Completed 2 Segment(s). Total Execution Time: 179.795 secs
+WARNING:tensorflow:From /home/collins/.local/lib/python3.7/site-packages/tensorflow_core/python/compat/v2_compat.py:88: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+WARNING:tensorflow:From /home/collins/locusta-balancei/simplified/antennalLobe.py:269: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-11-06 22:06:23.432461: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2020-11-06 22:06:23.437642: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2900000000 Hz
+2020-11-06 22:06:23.437822: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55bea55bef30 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-11-06 22:06:23.437880: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+1
+Number of Neurons: 120
+Number of Synapses: 3298
+Batch 1 Running...Session started...Finished in 187.27 secs...Saving...Saved ( Execution Time: 187.28 secs )
+Completed 3 Segment(s). Total Execution Time: 187.281 secs
+WARNING:tensorflow:From /home/collins/.local/lib/python3.7/site-packages/tensorflow_core/python/compat/v2_compat.py:88: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+WARNING:tensorflow:From /home/collins/locusta-balancei/simplified/antennalLobe.py:269: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-11-06 22:09:35.462726: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2020-11-06 22:09:35.467501: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2900000000 Hz
+2020-11-06 22:09:35.467670: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x56492c0d29f0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-11-06 22:09:35.467727: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+1
+Number of Neurons: 120
+Number of Synapses: 3298
+Batch 1 Running...Session started...Finished in 185.15 secs...Saving...Saved ( Execution Time: 185.158 secs )
+Completed 4 Segment(s). Total Execution Time: 185.16 secs
+WARNING:tensorflow:From /home/collins/.local/lib/python3.7/site-packages/tensorflow_core/python/compat/v2_compat.py:88: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+WARNING:tensorflow:From /home/collins/locusta-balancei/simplified/antennalLobe.py:269: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-11-06 22:12:45.322969: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2020-11-06 22:12:45.328163: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2900000000 Hz
+2020-11-06 22:12:45.328331: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5609e81cfb00 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-11-06 22:12:45.328390: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+1
+Number of Neurons: 120
+Number of Synapses: 3298
+Batch 1 Running...Session started...Finished in 184.05 secs...Saving...Saved ( Execution Time: 184.059 secs )
+Completed 5 Segment(s). Total Execution Time: 184.06 secs
+WARNING:tensorflow:From /home/collins/.local/lib/python3.7/site-packages/tensorflow_core/python/compat/v2_compat.py:88: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+WARNING:tensorflow:From /home/collins/locusta-balancei/simplified/antennalLobe.py:269: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-11-06 22:15:54.140755: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2020-11-06 22:15:54.145958: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2900000000 Hz
+2020-11-06 22:15:54.146247: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5633d511e990 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-11-06 22:15:54.146310: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+1
+Number of Neurons: 120
+Number of Synapses: 3298
+Batch 1 Running...Session started...Finished in 187.27 secs...Saving...Saved ( Execution Time: 187.274 secs )
+Completed 6 Segment(s). Total Execution Time: 187.275 secs
+Metadata Acquired. Starting Simulation.
+Welcome to the AL !!!
+Simulation Completed. Time taken: 1240.22
+'Thank you for using our services.'-AL
+Program Complete.
