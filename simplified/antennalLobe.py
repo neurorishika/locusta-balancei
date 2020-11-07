@@ -109,7 +109,7 @@ V0 = [-20.0]*n_n                     # Decay Potential
 sigma = [1.5]*n_n                    # Decay Time Constant
 # g_fgaba = [0.36]*p_n+[0.3]*l_n        # fGABA Conductance
 # g_fgaba = [1.3]*p_n+[0.8]*l_n        # fGABA Conductance
-g_fgaba = [0.0]*p_n+[float(sys.argv[6])]*l_n #0.4       # fGABA Conductance
+g_fgaba = [0.0]*p_n+[(0.5/float(locust['LNLN']))*float(sys.argv[6])]*l_n #0.4       # fGABA Conductance
 E_fgaba = [-70.0]*n_n                # fGABA Potential
 
 ## Defining GABAslow Synapse Connectivity ##
