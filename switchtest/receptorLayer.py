@@ -96,19 +96,63 @@ for i in range(locust['ORN_types']): # Generate ORN types
 
 orns = np.array(orns*locust['ORN_replicates'])
 
-
 print("Generation Complete.")
 
 # Save ORN Data
 np.save(sys.argv[4]+'/ORN Firing Data',orns[:,::100])
 
-X = np.zeros((locust['AL_n'],orns.shape[1]))
+np.random.seed()
+init_theta = np.random.uniform(size=orns.shape[0])
+random_normal = np.random.normal(size=orns.shape)
 
-for i in range(locust['AL_n']):
-    X[i,:] = orns.mean(axis=0)-orns[:,:int(protocol['odor_start']/protocol['resolution'])].mean()
+def spike_generator(fr,resolution,init_theta=init_theta,random_normal=random_normal):
+    spike = np.zeros(fr.shape)
+    theta = init_theta
+    for i in range(fr.shape[1]):
+        dtheta = resolution/1000*fr[:,i]
+        theta = theta + dtheta + resolution*0.75*random_normal[:,i]
+        spike[:,i]= theta>1
+        theta = np.where(theta>1,np.zeros(theta.shape[0]),theta)
+        if i%int(1000/resolution)==0:
+            print('ORN Spiking {}/{} ms Completed'.format(int(i*resolution),int(fr.shape[1]*resolution)), end = '\r')
+    return spike
 
-A_numbers = np.random.choice(np.arange(90,120),size=6,replace=False)
-X[A_numbers,int((protocol['odor_start']+500)/protocol['resolution']):int((protocol['odor_start']+700)/protocol['resolution'])] = 1.5*X[A_numbers,int((protocol['odor_start']+500)/protocol['resolution']):int((protocol['odor_start']+700)/protocol['resolution'])]
+orns_spike = spike_generator(orns,0.01)
+print()
+
+# Generate Antennal Output
+
+print("Generating Antennal Input...")
+
+ORN_Output_s = np.matmul(orns_spike.T,locust['ORN-AL']).T
+
+p_n = int(0.75*locust['AL_n'])
+
+ORN_Output_current = np.zeros(ORN_Output_s.shape)
+for i in range(ORN_Output_s.shape[0]):
+    cfilter = 0.5*np.ones(30)
+    ORN_Output_current[i,:] = np.convolve(ORN_Output_s[i,:], cfilter,'same')
+    print('{}/{} Acetylcholine Concentration Integration Completed'.format(i+1,locust['AL_n']), end = '\r')
+print()
+
+ep= 0.01
+a = 10.0
+b = 0.2
+
+def f(o,t):
+    do = a*(1.0-o)*ORN_Output_current[:,int(t/ep)]/np.array([50]*90+[700]*30) - b*o
+    return do
+
+time = np.arange(ORN_Output_current.shape[1])*ep
+X = np.zeros(ORN_Output_current.shape)
+
+X[:,0]= 0
+
+for i in range(1,time.shape[0]):
+    X[:,i] = X[:,i-1] + ep*f(X[:,i-1],time[i-1])
+    if i%int(100/ep) == 0:
+        print('{}s/{}s Acetylcholine Receptor Integration Completed'.format(i*ep,time.shape[0]*ep), end = '\r')
+print()
 
 print("Generation Complete")
 
