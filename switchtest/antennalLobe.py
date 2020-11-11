@@ -109,7 +109,7 @@ V0 = [-20.0]*n_n                     # Decay Potential
 sigma = [1.5]*n_n                    # Decay Time Constant
 # g_fgaba = [0.36]*p_n+[0.3]*l_n        # fGABA Conductance
 # g_fgaba = [1.3]*p_n+[0.8]*l_n        # fGABA Conductance
-g_fgaba = [2.0]*p_n+[0.5/0.2*2.0]*l_n #0.4       # fGABA Conductance
+g_fgaba = [1.0]*p_n+[0.5/0.2*2.0]*l_n #0.4       # fGABA Conductance
 E_fgaba = [-70.0]*n_n                # fGABA Potential
 
 ## Defining GABAslow Synapse Connectivity ##
@@ -129,7 +129,7 @@ sigma_sgaba = [1.5]*n_n              # Decay Time Constant
 # G_sgaba = [1.3]*p_n+[0.0]*l_n      # sGABA Conductance
 #G_sgaba = [0.05]*p_n+[0.0]*l_n      # sGABA Conductance
 # removed to test stronger dip G_sgaba = [0.09]*p_n+[0.0]*l_n      # sGABA Conductance
-G_sgaba = [0.1]*p_n+[0.0]*l_n #0.09      # sGABA Conductance
+G_sgaba = [0.09]*p_n+[0.0]*l_n #0.09      # sGABA Conductance
 E_sgaba = [-95.0]*n_n                # sGABA Potential
 
 
@@ -389,7 +389,7 @@ LNpeak = current_input[p_n:,100000:200000].mean()
 LNbase = current_input[p_n:,:100000].mean()
 
 current_input[:p_n,:] = (current_input[:p_n,:] * PN_scale)
-current_input[p_n:,:] = ((current_input[p_n:,:]-LNbase)/(LNpeak-LNbase)*(1.0*LNbase)+LNbase) * LN_scale
+current_input[p_n:,:] = ((current_input[p_n:,:]-LNbase)/(LNpeak-LNbase)*(1.0*LNbase)+0.0*LNbase) * 2 * LN_scale
 
 if sys.argv[1] == '0':
     state_vector =  [-45]* p_n+[-45]* l_n + [0.5]* (n_n + 4*p_n + 3*l_n) + [2.4*(10**(-4))]*l_n + [0]*(n_syn_ach+n_syn_fgaba+2*n_syn_sgaba) + [-(sim_time+1)]*n_n
