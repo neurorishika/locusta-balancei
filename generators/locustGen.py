@@ -44,10 +44,10 @@ data['t_adaptation'] = np.random.uniform(0,1200,size=data['ORN_types'])
 
 data['AL_n'] = 120
 data['PNPN'] = 0.0
-data['PNLN'] = 0.0
+data['PNLN'] = 0.5
 data['LNLN'] = float(input("Enter LN-LN connection probability: "))#0.5
 #data['LNPN'] = 0.5
-data['LNPN'] = 0.0
+data['LNPN'] = 0.2
 
 l_n = int(0.25*data['AL_n'])
 p_n = int(0.75*data['AL_n'])
