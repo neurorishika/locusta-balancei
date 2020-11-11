@@ -1,0 +1,39 @@
+==========================================
+SLURM_CLUSTER_NAME = param-brahma
+SLURM_ARRAY_JOB_ID = 
+SLURM_ARRAY_TASK_ID = 
+SLURM_ARRAY_TASK_COUNT = 
+SLURM_ARRAY_TASK_MAX = 
+SLURM_ARRAY_TASK_MIN = 
+SLURM_JOB_ACCOUNT = collins
+SLURM_JOB_ID = 517407
+SLURM_JOB_NAME = tensorflow
+SLURM_JOB_NODELIST = cn[010-011,016,026,028-030,102,129]
+SLURM_JOB_USER = collins
+SLURM_JOB_UID = 7009
+SLURM_JOB_PARTITION = standard
+SLURM_TASK_PID = 12893
+SLURM_SUBMIT_DIR = /home/collins/locusta-balancei/switchtest
+SLURM_CPUS_ON_NODE = 1
+SLURM_NTASKS = 
+SLURM_TASK_PID = 12893
+==========================================
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 517407.6 ON cn102 CANCELLED AT 2020-11-10T16:53:35 ***
+slurmstepd: error: *** STEP 517407.0 ON cn011 CANCELLED AT 2020-11-10T16:53:35 ***
+slurmstepd: error: *** STEP 517407.4 ON cn029 CANCELLED AT 2020-11-10T16:53:35 ***
+slurmstepd: error: *** STEP 517407.1 ON cn016 CANCELLED AT 2020-11-10T16:53:35 ***
+slurmstepd: error: *** STEP 517407.5 ON cn030 CANCELLED AT 2020-11-10T16:53:35 ***
+slurmstepd: error: *** STEP 517407.2 ON cn026 CANCELLED AT 2020-11-10T16:53:35 ***
+slurmstepd: error: *** STEP 517407.8 ON cn010 CANCELLED AT 2020-11-10T16:53:35 ***
+slurmstepd: error: *** STEP 517407.3 ON cn028 CANCELLED AT 2020-11-10T16:53:35 ***
+slurmstepd: error: *** STEP 517407.7 ON cn129 CANCELLED AT 2020-11-10T16:53:35 ***
+slurmstepd: error: *** JOB 517407 ON cn010 CANCELLED AT 2020-11-10T16:53:35 ***
