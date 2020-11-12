@@ -107,9 +107,11 @@ X = np.zeros((locust['AL_n'],orns.shape[1]))
 for i in range(locust['AL_n']):
     X[i,:] = orns.mean(axis=0)-orns[:,:int(protocol['odor_start']/protocol['resolution'])].mean()
 
-X = (1+0.2*np.sin(2*np.pi*20/1000*protocol['resolution']*np.arange(X.shape[1])))*X
-#A_numbers = np.random.choice(np.arange(90,120),size=6,replace=False)
-#X[A_numbers,int((protocol['odor_start']+500)/protocol['resolution']):int((protocol['odor_start']+700)/protocol['resolution'])] = 1.5*X[A_numbers,int((protocol['odor_start']+500)/protocol['resolution']):int((protocol['odor_start']+700)/protocol['resolution'])]
+#X = (1+0.2*np.sin(2*np.pi*20/1000*protocol['resolution']*np.arange(X.shape[1])))*X
+
+np.random.seed(12)
+A_numbers = np.random.choice(np.arange(90,120),size=6,replace=False)
+X[A_numbers,int((protocol['odor_start']+500)/protocol['resolution']):int((protocol['odor_start']+700)/protocol['resolution'])] = 1.5*X[A_numbers,int((protocol['odor_start']+500)/protocol['resolution']):int((protocol['odor_start']+700)/protocol['resolution'])]
 
 print("Generation Complete")
 
