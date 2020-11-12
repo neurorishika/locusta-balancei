@@ -32,7 +32,7 @@ if not os.path.exists(folder):
 start = t.time()
 
 # Start Receptor Layer Processing
-call(['python', homepath+'locusta-balancei/simplified/receptorLayer.py', odor_path, protocol_path, locust_path, folder])
+call(['python', homepath+'locusta-balancei/simplified/receptorLayer.py', odor_path, protocol_path, locust_path, folder, sys.argv[4]])
 
 # Load Protocol data
 with open(protocol_path, 'rb') as fp:
